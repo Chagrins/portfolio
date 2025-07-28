@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./src/core.css"/>
+        <script src="./src/data.js"></script>
+        <script src="./src/galleryitem.js" defer></script>
+        <script type="text/javascript">
+            function removeLoad() {
+                document.body.classList.remove("is-loading");
+            }
+
+            window.onload = removeLoad;
+        </script>
+    </head>
+    <body class="is-loading">
+        <script src="./src/inlineSVG.min.js"></script>
+        <div id="centered-body">
+            <div id="header">
+                <img id="portrait" src="./resources/mooncrash.png"/>
+                <div id="description">
+                    <div class="name">Malcolm Gruber</div>
+                    <div class="title">Astrobody Engineer</div>
+                    <div class="subdescription">software engineer from 🇺🇸</div>
+                    <ul class="style1 icons">
+                        <li style="opacity: 1; transform: none;">
+                            <a href="https://chagrins.itch.io/" role="button">
+                                <img id="itch-logo" class="svg" data-src="./resources/itch-io-black.svg" alt="itch-io" viewBox="0 0 40 40" />
+                            </a>
+                        </li>
+                        <li style="opacity: 1; transform: none;">
+                            <a href="https://mastodon.gamedev.place/@Chagrins" role="button">
+                                <img id="mastodon-logo" class="svg" data-src="./resources/mastodon.svg" alt="mastodon" viewBox="0 0 40 40" />
+                            </a>
+                        </li>
+                        <li style="opacity: 1; transform: none;">
+                            <a href="https://chagrins-og.bsky.social" role="button">
+                                <img id="bluesky-logo" class="svg" data-src="./resources/bluesky_black.svg" alt="bluesky" viewBox="0 0 40 40" />
+                            </a>
+                        </li>
+                        <li style="opacity: 1; transform: none;">
+                            <a href="https://ko-fi.com/malcolmgruber" role="button">
+                                <img id="kofi-logo" class="svg" data-src="./resources/kofi_black.svg" alt="ko-fi" viewBox="0 0 40 40" />
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="subdescription">building <hl>tools</hl> and <hl>games</hl> for fun</div>
+                    <ul id="action-bar" class="style1 buttons" style="opacity: 1;">
+                        <li>
+                            <a id="email-button" href="mailto:mooncrashstudio@gmail.com" class="button n02" role="button">
+                                <img id="email" class="svg" data-src="./resources/email.svg" alt="Email" viewBox="0 0 40 40">
+                                <span class="label">email</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="navigation">
+                <ul class="row_display">
+                    <li>
+                        <a class="link_button" href="./index.html?personal" target="_blank" role="button">
+                            Personal
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link_button" href="./index.html?professional" target="_blank" role="button">
+                            Professional
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a class="link_button" href="./index.html?contact" target="_blank" role="button">
+                            Contact
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+            <div id="portfolios">
+                <div id="gallery">
+                    <ul>
+                    </ul>
+                </div>
+                <div id="contact">
+
+                </div>
+            </div>
+        </div>
+        <script>
+            inlineSVG.init({
+                svgSelector: 'img.svg', // the class attached to all images that should be inlined
+                initClass: 'js-inlinesvg', // class added to <html>
+                }, function () {
+                console.log('All SVGs inlined');
+            });
+
+            const queryString = window.location.search.slice(1);
+            if(queryString === "contact") {
+
+            }
+            else {
+                var galleryData = getData(queryString);
+                var gallery = document.getElementById("gallery");
+                gallery.children[0].innerHTML = galleryData;
+            }
+        </script>
+    </body>
+</html>
