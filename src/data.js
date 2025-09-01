@@ -3,6 +3,7 @@ function getData(category) {
 
     if(category === "" || category === "personal") {
         return `
+                <gallery-item src="./resources/personal/runshibarun.png" target="https://generalisk.itch.io/run-shiba-run" caption="Run Shiba Run!<br/>Brackeys Game Jam 2025.2" subcaption="Unity" is-list="true"></gallery-item>
                 <gallery-item src="./resources/personal/mistywalks.png" target="https://mistywalks.com/" caption="Misty Walks" subcaption="Webpage - Custom front end and NodeJS back end" is-list="true"></gallery-item>
                 <gallery-item src="./resources/personal/earthmars.png" target="https://itch.io/jam/stl-arcade-jam/rate/310627" caption="From Earth to Mars<br/>STL Arcade Jam 2018" subcaption="Unity" is-list="true"></gallery-item>
                 <gallery-item src="https://raw.githubusercontent.com/Floppy-Hat-Studio/Floppy-Saves/main/Resources/Icon128.png" target="https://github.com/Moon-Crash/Floppy-Saves/" caption="Floppy Saves" subcaption="Unreal Engine - Plugin" is-list="true"></gallery-item>
