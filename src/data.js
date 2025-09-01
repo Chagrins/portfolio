@@ -20,7 +20,7 @@ function getData(category) {
                 <gallery-item src="./resources/logos/tapestry.jpg" target="https://www.tapestrysolutions.com/" caption="Tapestry Solutions" is-list="true"></gallery-item>
                 <gallery-item src="./resources/logos/indepth.jpg" target="https://indepth.com/" caption="In-Dpeth Engineering" is-list="true"></gallery-item>
                 <gallery-item src="./resources/logos/cubic.jpg" target="https://www.youtube.com/watch?v=j-YSUF6Y1a0" caption="Cubic Corp CALS" is-list="true"></gallery-item>
-                <gallery-item src="./resources/logos/ea-tib.jpg" target="https://en.wikipedia.org/wiki/NCAA_Football_14" caption="RPG Party" is-list="true"></gallery-item>
+                <gallery-item src="./resources/logos/ea-tib.jpg" target="https://en.wikipedia.org/wiki/NCAA_Football_14" caption="EA Tiburon" is-list="true"></gallery-item>
                 <gallery-item src="./resources/logos/bisim.jpg" target="https://bisimulations.com/" caption="Bohemia Interactive Simulations" is-list="true"></gallery-item>`;
     }
 
