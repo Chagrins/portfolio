@@ -7,14 +7,14 @@ class GalleryItem extends HTMLElement {
         this.isListItem = this.getAttribute('is-list');
         this.displaySubtext = this.getAttribute('subcaption');
 
-        console.log(this.attributes.length);
+        
         var captionText = `<p>${this.displayText}</p>`
         if(this.displaySubtext !== null) {
             captionText += `<br/><p>${this.displaySubtext}</p>`;
         }
-        var html = `
+var html = `
         <a class="thumbnail" href="${this.displayTarget}" target="_blank">
-            <img src="${this.displayImage}" alt="${this.displayText}" />
+            <img src="${this.displayImage}" alt="${this.displayText}" loading="lazy" decoding="async" width="284" height="284"/>
         </a>
         <div class="caption">
             ${captionText}
